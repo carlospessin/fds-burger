@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FDS Burger</title>
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+  <section>
+    <div class="circle"></div>
+    <header>
+      <a href=""><img src="./src/assets/logo-1.png" alt="logo" class="logo"></a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Novidades</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <div class="textBox">
+        <h2>Um por dia.<br>Experimente <span>todos!</span></h2>
+        <p>Sex, Sab e Dom são os burgers da casa.<br>O burger do dia é sempre o mais barato. <spam>Aproveite!</spam></p>
+        <a href="#">Saiba mais</a>
+      </div>
+      <div class="imgBox">
+        <img src="./src/assets/sex.png" alt="sex burger" class="burger">
+      </div>
+    </div>
+    <ul class="thumb">
+      <li><img src="./src/assets/sex.png" alt="sex burger" onclick="imgSlider('./src/assets/sex.png');changeCircleColor('#F6B13A')"></li>
+      <li><img src="./src/assets/sab.png" alt="sex burger" onclick="imgSlider('./src/assets/sab.png');changeCircleColor('#f6853a')"></li>
+      <li><img src="./src/assets/dom.png" alt="sex burger" onclick="imgSlider('./src/assets/dom.png');changeCircleColor('#f63a3a')"></li>
+    </ul>
+    <ul class="sci">
+      <li><a href="#"><img src="./src/assets/facebook.png" alt="facebook"></a></li>
+      <li><a href="#"><img src="./src/assets/instagram.png" alt="instagram"></a></li>
+    </ul>
+  </section>
+  <script type="text/javascript">
+  function imgSlider(anything) {
+    document.querySelector('.burger').src = anything;
+  }
+
+  function changeCircleColor(color) {
+    const circle = document.querySelector('.circle');
+    circle.style.background = color;
+  }
+  </script>
+</body>
+</html>
